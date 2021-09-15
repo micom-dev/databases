@@ -1,0 +1,46 @@
+creators:
+  - name: Diener, Christian
+    affiliation: Institute for Systems Biology
+    orcid: 0000-0002-7476-0868
+upload_type: dataset
+access_right: open
+license: cc-by-sa
+description: |
+  This repository includes pre-built model databases for the microbial community
+  modeling tool MICOM (https://micom-dev.github.io/micom). All model databases will
+  work with the MICOM python package or the MICOM Qiime 2 plugin
+  (http://github.com/micom-dev/q2-micom).
+  The Zenodo release is built and versioned automatically from the the source
+  repository at http://github.com/micom-dev/databases. Thus, all bug reports, requests,
+  and comments should be made there.
+  ---
+  Model databases are named with the following scheme:
+    > SOURCE_SVER_TAXONOMY_RANK_VERSION.qza
+      where:
+        SOURCE = source database for the models
+        SVER = version of the source database
+        TAXONOMY = the taxonomy naming scheme used
+        RANK = the taxonomic rank models were collapsed on
+        VERSION = the version of the built database
+  ---
+  For all practical purposes the TAXONOMY should coincide with the taxonomic classification
+  of your amplicons or gneomes. For instance, if you used kraken2  and bracken2 you should
+  use a model database with TAXONOMY = ncbi.
+  For growth media that can be used with the model databases here please see the MICOM
+  media repository at https://github.com/micom-dev/media.
+references:
+  - >
+    Diener C, Gibbons SM, Resendis-Antonio O.
+    MICOM: Metagenome-Scale Modeling To Infer Metabolic Interactions in the Gut Microbiota.
+    mSystems. 2020 Jan 21;5(1):e00606-19.
+    doi: 10.1128/mSystems.00606-19. PMID: 31964767; PMCID: PMC6977071
+  - >
+    Machado D, Andrejev S, Tramontano M, Patil KR.
+    Fast automated reconstruction of genome-scale metabolic models for microbial species and communities.
+    Nucleic Acids Res. 2018 Sep 6;46(15):7542-7553.
+    doi: 10.1093/nar/gky537. PMID: 30192979; PMCID: PMC6125623
+  - >
+    Magnúsdóttir S, Heinken A, Kutt L, Ravcheev DA, Bauer E, Noronha A, Greenhalgh K, Jäger C, Baginska J, Wilmes P, Fleming RM, Thiele I.
+    Generation of genome-scale metabolic reconstructions for 773 members of the human gut microbiota.
+    Nat Biotechnol. 2017 Jan;35(1):81-89.
+    doi: 10.1038/nbt.3703. Epub 2016 Nov 28. PMID: 27893703
