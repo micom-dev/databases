@@ -9,6 +9,8 @@ import subprocess
 from ruamel.yaml import YAML
 from rich.console import Console
 
+RN = f"MICOM model databases version {meta["version"]}.\n\n{final["doi_url"]}\n"
+
 con = Console()
 
 meta = YAML(typ="safe", pure=True).load(open("zenodo.yml"))
@@ -23,15 +25,10 @@ def check_status(r):
 
 if __name__ == "__main__":
     if "ZENODO_TOKEN" not in environ:
-        raise ValueError("ZENODO_TOKEN env avriable needs to be set!")
+        raise ValueError("ZENODO_TOKEN env variable needs to be set!")
     token = environ["ZENODO_TOKEN"]
     {"access_token": token}
 
-    try:
-        ret = subprocess.run(["git", "describe", "--tags", "--abbrev=0"])
-    except subprocess.CalledProcessError:
-        raise RuntimeError("No tag in git repository!")
-    meta["version"] = ret.stdout
     meta["title"] = "MICOM model databases version %s" % meta["version"]
 
     con.log(":hammer: Creating new Zenodo deposition...")
@@ -46,7 +43,7 @@ if __name__ == "__main__":
     bucket_url = deposition["links"]["bucket"]
     con.log(f"[green]Successfully created the new deposition {deposition["id"]}.")
 
-    files = glob("databases/*.qza")
+    files = glob(f"recipes/*/databases/*_{meta["version"]}.qza")
     uploads = {}
     for fi in files:
         name, ext = path.splitext(path.basename(fi))
@@ -79,5 +76,7 @@ if __name__ == "__main__":
     )
     check_status(r)
     final = r.json()
+    with open(path.join("release_notes", f"{meta["version"]}.txt"), "w") as rn:
+        rn.write(RN)
     con.log("[green]Published the new release to {final["doi_url"]}")
     con.log(final)

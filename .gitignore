@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Qiime2 stuff
+qiime2-*.yml
+q2-micom.yml
+
+# Nextflow
+work
+.nextflow*
+
+# Large files
+databases
+models
