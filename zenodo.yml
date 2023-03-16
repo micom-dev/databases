@@ -10,27 +10,34 @@ description: |
   This repository includes pre-built model databases for the microbial community
   modeling tool MICOM (https://micom-dev.github.io/micom). All model databases will
   work with the MICOM python package or the MICOM Qiime 2 plugin
-  (http://github.com/micom-dev/q2-micom).
+  (http://github.com/micom-dev/q2-micom).<br><br>
   The Zenodo release is built and versioned automatically from the the source
   repository at http://github.com/micom-dev/databases. Thus, all bug reports, requests,
-  and comments should be made there.
-  ---
-  Model databases are named with the following scheme:
-    > SOURCE_SVER_TAXONOMY_RANK_VERSION.qza
-      where:
-        SOURCE = source database for the models
-        SVER = version of the source database
-        TAXONOMY = the taxonomy naming scheme used
-        RANK = the taxonomic rank models were collapsed on
-        VERSION = the version of the built database
-  ---
+  and comments should be made there.<br>
+
+  <hr>
+
+  Model databases are named with the following scheme:<br>
+  SOURCE_SVER_TAXONOMY_TVER_RANK_VERSION.qza<br>
+  where:<br>
+  <ul>
+    <li>SOURCE = source database for the models</li>
+    <li>SVER = version of the source database</li>
+    <li>TAXONOMY = the taxonomy naming scheme used</li>
+    <li>TVER = the version of the taxonomy naming scheme</li>
+    <li>RANK = the taxonomic rank models were collapsed on</li>
+    <li>VERSION = the version of the built database</li>
+  </ul>
+
+  <hr>
+
   For all practical purposes the TAXONOMY should coincide with the taxonomic classification
   of your amplicons or genomes. For instance, if you used kraken2  and bracken2 you should
   use a model database with TAXONOMY = ncbi. Note that some taxonomy databases (GTDB, GreenGenes)
   prefix taxonomy identifiers with a rank indentifier like `s__Species`. Those are usually maintained
   in the databases here except for the NCBI Taxonomy which usually does not use those. You can
   verify taxon names using the manifests in the `release` section of http://github.com/micom-dev/databases .
-
+  <br><br>
   For growth media that can be used with the model databases here please see the MICOM
   media repository at https://github.com/micom-dev/media.
 references:

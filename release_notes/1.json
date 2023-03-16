@@ -1,0 +1,221 @@
+{
+    "conceptdoi": "10.5281/zenodo.7739095",
+    "conceptrecid": "7739095",
+    "created": "2023-03-15T23:57:25.773605+00:00",
+    "doi": "10.5281/zenodo.7739096",
+    "doi_url": "https://doi.org/10.5281/zenodo.7739096",
+    "files": [
+        {
+            "checksum": "839f8ba3848eb7831facd59ad8be09e6",
+            "filename": "agora103_gtdb207_genus_1.qza",
+            "filesize": 29056379,
+            "id": "5bc62ed2-6ee3-469b-b89c-c6c30d3c6798",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/agora103_gtdb207_genus_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/5bc62ed2-6ee3-469b-b89c-c6c30d3c6798"
+            }
+        },
+        {
+            "checksum": "50b525e5c7fbfa2172ec9e845e8a7cfe",
+            "filename": "agora103_gtdb207_species_1.qza",
+            "filesize": 54916958,
+            "id": "7fe4fd72-ef5a-44e9-8c2a-800dd2b5010f",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/agora103_gtdb207_species_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/7fe4fd72-ef5a-44e9-8c2a-800dd2b5010f"
+            }
+        },
+        {
+            "checksum": "05dbcb7f7a77f79302a8245fba37cf88",
+            "filename": "agora103_refseq216_genus_1.qza",
+            "filesize": 25149176,
+            "id": "101e3d6c-7927-42e9-a294-789f74b10b3f",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/agora103_refseq216_genus_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/101e3d6c-7927-42e9-a294-789f74b10b3f"
+            }
+        },
+        {
+            "checksum": "29eed38c731d332c3505f45dbf31fc3c",
+            "filename": "agora103_refseq216_species_1.qza",
+            "filesize": 59770646,
+            "id": "0ee8189c-4f70-45f7-a646-e427477e04c8",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/agora103_refseq216_species_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/0ee8189c-4f70-45f7-a646-e427477e04c8"
+            }
+        },
+        {
+            "checksum": "90b6247182725576c1066cd545cbed05",
+            "filename": "agora201_gtdb207_genus_1.qza",
+            "filesize": 97726206,
+            "id": "7e1c93ca-f051-4960-a898-01ca4f1ec582",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/agora201_gtdb207_genus_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/7e1c93ca-f051-4960-a898-01ca4f1ec582"
+            }
+        },
+        {
+            "checksum": "d4660f296227047b6016a334b758d7ad",
+            "filename": "agora201_gtdb207_species_1.qza",
+            "filesize": 227948552,
+            "id": "ae155f20-0973-4014-a207-bfbb6a30d6bf",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/agora201_gtdb207_species_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/ae155f20-0973-4014-a207-bfbb6a30d6bf"
+            }
+        },
+        {
+            "checksum": "5e37c96dd83b733c43eae815ab95c64b",
+            "filename": "agora201_refseq216_genus_1.qza",
+            "filesize": 86290761,
+            "id": "6378cbf6-3a1b-43e2-8652-7d5cb4bcbcab",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/agora201_refseq216_genus_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/6378cbf6-3a1b-43e2-8652-7d5cb4bcbcab"
+            }
+        },
+        {
+            "checksum": "6a13da2a3fd9b1bc059987d6344f32b6",
+            "filename": "agora201_refseq216_species_1.qza",
+            "filesize": 264422408,
+            "id": "bcd8d29a-94e8-4b0f-93e2-e7fb257bf7fe",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/agora201_refseq216_species_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/bcd8d29a-94e8-4b0f-93e2-e7fb257bf7fe"
+            }
+        },
+        {
+            "checksum": "5a18d1a77624d4072054347f82c0883c",
+            "filename": "carveme260d0f1_gtdb207_genus_1.qza",
+            "filesize": 316583778,
+            "id": "fa142f1d-d654-4ab9-aa35-56882810c439",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/carveme260d0f1_gtdb207_genus_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/fa142f1d-d654-4ab9-aa35-56882810c439"
+            }
+        },
+        {
+            "checksum": "62b5a5bc41aa48f20d82cb8c23d14275",
+            "filename": "carveme260d0f1_gtdb207_species_1.qza",
+            "filesize": 639760628,
+            "id": "e8450599-a8d4-40c4-ac7b-1474e426dce0",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/carveme260d0f1_gtdb207_species_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/e8450599-a8d4-40c4-ac7b-1474e426dce0"
+            }
+        },
+        {
+            "checksum": "44ad7c2a723ece26cd1f6adc688beec1",
+            "filename": "carveme260d0f1_refseq216_genus_1.qza",
+            "filesize": 312413398,
+            "id": "3c513129-ef6d-4e04-ab08-387187478bf4",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/carveme260d0f1_refseq216_genus_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/3c513129-ef6d-4e04-ab08-387187478bf4"
+            }
+        },
+        {
+            "checksum": "192f4090c454f0e3f15bd0d614d5244e",
+            "filename": "carveme260d0f1_refseq216_species_1.qza",
+            "filesize": 695126711,
+            "id": "0358835a-6906-4ca2-8f43-34a3eb3f8a23",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/carveme260d0f1_refseq216_species_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/0358835a-6906-4ca2-8f43-34a3eb3f8a23"
+            }
+        },
+        {
+            "checksum": "112a9c93151384a0f317460f91326e23",
+            "filename": "uhgg201_gtdb207_genus_1.qza",
+            "filesize": 162032852,
+            "id": "bfef7fb1-fe29-4270-b3e7-8957497576ac",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/uhgg201_gtdb207_genus_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/bfef7fb1-fe29-4270-b3e7-8957497576ac"
+            }
+        },
+        {
+            "checksum": "f9b2e4d89ef98130f1937658b894a8aa",
+            "filename": "uhgg201_gtdb207_species_1.qza",
+            "filesize": 472946730,
+            "id": "086ca031-e3a6-4265-bd3d-e6fbeef99141",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/uhgg201_gtdb207_species_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/086ca031-e3a6-4265-bd3d-e6fbeef99141"
+            }
+        },
+        {
+            "checksum": "e4d82459c55d1163a204f72a6d3938a4",
+            "filename": "uhgg201_refseq216_genus_1.qza",
+            "filesize": 70682240,
+            "id": "82763691-96ee-45be-ac59-22eac8e94747",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/uhgg201_refseq216_genus_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/82763691-96ee-45be-ac59-22eac8e94747"
+            }
+        },
+        {
+            "checksum": "c3c3c403e3a83618c458ea55ef333dd1",
+            "filename": "uhgg201_refseq216_species_1.qza",
+            "filesize": 142976450,
+            "id": "0c263cc1-d340-4948-b2d4-5d53fb06c1d6",
+            "links": {
+                "download": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64/uhgg201_refseq216_species_1.qza",
+                "self": "https://zenodo.org/api/deposit/depositions/7739096/files/0c263cc1-d340-4948-b2d4-5d53fb06c1d6"
+            }
+        }
+    ],
+    "id": 7739096,
+    "links": {
+        "badge": "https://zenodo.org/badge/doi/10.5281/zenodo.7739096.svg",
+        "bucket": "https://zenodo.org/api/files/64378dd3-ae79-4a33-b835-f8e194fa9c64",
+        "conceptbadge": "https://zenodo.org/badge/doi/10.5281/zenodo.7739095.svg",
+        "conceptdoi": "https://doi.org/10.5281/zenodo.7739095",
+        "doi": "https://doi.org/10.5281/zenodo.7739096",
+        "latest": "https://zenodo.org/api/records/7739096",
+        "latest_html": "https://zenodo.org/record/7739096",
+        "record": "https://zenodo.org/api/records/7739096",
+        "record_html": "https://zenodo.org/record/7739096"
+    },
+    "metadata": {
+        "access_right": "open",
+        "communities": [
+            {
+                "identifier": "zenodo"
+            }
+        ],
+        "creators": [
+            {
+                "affiliation": "Institute for Systems Biology",
+                "name": "Diener, Christian",
+                "orcid": "0000-0002-7476-0868"
+            }
+        ],
+        "description": "This repository includes pre-built model databases for the microbial community\nmodeling tool MICOM (https://micom-dev.github.io/micom). All model databases will\nwork with the MICOM python package or the MICOM Qiime 2 plugin\n(http://github.com/micom-dev/q2-micom).<br><br>\nThe Zenodo release is built and versioned automatically from the the source\nrepository at http://github.com/micom-dev/databases. Thus, all bug reports, requests,\nand comments should be made there.<br>\n\n\n\nModel databases are named with the following scheme:<br>\nSOURCE_SVER_TAXONOMY_RANK_VERSION.qza<br>\nwhere:<br>\n<ul>\n  <li>SOURCE = source database for the models</li>\n  <li>SVER = version of the source database</li>\n  <li>TAXONOMY = the taxonomy naming scheme used</li>\n  <li>RANK = the taxonomic rank models were collapsed on</li>\n  <li>VERSION = the version of the built database</li>\n</ul>\n\n\n\nFor all practical purposes the TAXONOMY should coincide with the taxonomic classification\nof your amplicons or genomes. For instance, if you used kraken2  and bracken2 you should\nuse a model database with TAXONOMY = ncbi. Note that some taxonomy databases (GTDB, GreenGenes)\nprefix taxonomy identifiers with a rank indentifier like `s__Species`. Those are usually maintained\nin the databases here except for the NCBI Taxonomy which usually does not use those. You can\nverify taxon names using the manifests in the `release` section of http://github.com/micom-dev/databases .\n<br><br>\nFor growth media that can be used with the model databases here please see the MICOM\nmedia repository at https://github.com/micom-dev/media.",
+        "doi": "10.5281/zenodo.7739096",
+        "license": "CC-BY-SA-4.0",
+        "prereserve_doi": {
+            "doi": "10.5281/zenodo.7739096",
+            "recid": 7739096
+        },
+        "publication_date": "2023-03-15",
+        "references": [
+            "Diener C, Gibbons SM, Resendis-Antonio O. MICOM: Metagenome-Scale Modeling To Infer Metabolic Interactions in the Gut Microbiota. mSystems. 2020 Jan 21;5(1):e00606-19. doi: 10.1128/mSystems.00606-19. PMID: 31964767; PMCID: PMC6977071",
+            "Machado D, Andrejev S, Tramontano M, Patil KR. Fast automated reconstruction of genome-scale metabolic models for microbial species and communities. Nucleic Acids Res. 2018 Sep 6;46(15):7542-7553. doi: 10.1093/nar/gky537. PMID: 30192979; PMCID: PMC6125623",
+            "Magn\u00fasd\u00f3ttir S, Heinken A, Kutt L, Ravcheev DA, Bauer E, Noronha A, Greenhalgh K, J\u00e4ger C, Baginska J, Wilmes P, Fleming RM, Thiele I. Generation of genome-scale metabolic reconstructions for 773 members of the human gut microbiota. Nat Biotechnol. 2017 Jan;35(1):81-89. doi: 10.1038/nbt.3703. Epub 2016 Nov 28. PMID: 27893703",
+            "Zimmermann, J., Kaleta, C. & Waschina, S. gapseq: informed prediction of bacterial metabolic pathways and reconstruction of accurate metabolic models. Genome Biol 22, 81 (2021). doi: 10.1186/s13059-021-02295-1",
+            "Heinken, A., Hertel, J., Acharya, G. et al. Genome-scale metabolic reconstruction of 7,302 human microorganisms for personalized medicine. Nat Biotechnol (2023). doi: 10.1038/s41587-022-01628-0",
+            "Almeida, A., Nayfach, S., Boland, M. et al. A unified catalog of 204,938 reference genomes from the human gut microbiome. Nat Biotechnol 39, 105\u2013114 (2021). doi: 10.1038/s41587-020-0603-3"
+        ],
+        "title": "MICOM model databases version 1",
+        "upload_type": "dataset",
+        "version": "1"
+    },
+    "modified": "2023-03-16T00:26:05.559481+00:00",
+    "owner": 18088,
+    "record_id": 7739096,
+    "state": "done",
+    "submitted": true,
+    "title": "MICOM model databases version 1"
+}
