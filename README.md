@@ -1,4 +1,4 @@
-<img src="https://github.com/micom-dev/q2-micom/raw/main/docs/assets/logo.png" width="75%">
+<img src="https://github.com/micom-dev/micom/raw/main/docs/source/micom.png" width="60%">
 
 # MICOM model databases
 
