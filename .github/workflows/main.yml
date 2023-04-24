@@ -47,7 +47,7 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         name: "version {{ steps.tag.outputs.version }}"
-        artifacts: recipes/*/manifests/*.tsv,release_notes/${{ steps.tag.outputs.version }}.json
+        artifacts: "recipes/*/manifests/*.tsv,release_notes/${{ steps.tag.outputs.version }}.json"
         bodyFile: "release_notes/${{ steps.tag.outputs.version }}.txt"
         draft: false
         prerelease: false
