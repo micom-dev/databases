@@ -39,9 +39,11 @@ jobs:
       with:
         name: manifests
         path: recipes/*/manifests/*.tsv
-    - name: Get release notes
+    - name: Read release notes
       id: rns
-      run: echo "notes=$(cat release_notes/${{ github.ref_name }}.txt)" >> $GITHUB_OUTPUT
+      uses: andstor/file-reader-action@v1
+      with:
+        path: "release_notes/${{ github.ref_name }}.txt"
     - name: Create Release
       uses: ncipollo/release-action@v1
       with:
@@ -55,5 +57,5 @@ jobs:
       uses: rzr/fediverse-action@master
       with:
         access-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
-        message: "New MICOM database release!\n ${{ steps.rns.outputs.notes }}"
+        message: "New MICOM database release!\n ${{ steps.rns.outputs.contents }}"
         host: "mstdn.science"
