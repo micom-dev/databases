@@ -1,7 +1,7 @@
 <img src="https://github.com/micom-dev/micom/raw/main/docs/source/micom.png" width="60%">
 
 [![Test and release](https://github.com/micom-dev/databases/actions/workflows/main.yml/badge.svg)](https://github.com/micom-dev/databases/actions/workflows/main.yml)
-[![DOI for the curernt release](https://zenodo.org/badge/DOI/10.5281/zenodo.7739096.svg)](https://doi.org/10.5281/zenodo.7739096)
+[![DOI for the current release](https://zenodo.org/badge/DOI/10.5281/zenodo.7739096.svg)](https://doi.org/10.5281/zenodo.7739096)
 [![Follow MICOM on Mastodon](https://img.shields.io/mastodon/follow/109960852316221526?domain=https%3A%2F%2Fmstdn.science&style=social)](https://mstdn.science/@micom)
 
 # MICOM model databases
