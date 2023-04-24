@@ -53,7 +53,7 @@ jobs:
         prerelease: false
     - name: toot release
       uses: rzr/fediverse-action@master
-        with:
-          access-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
-          message: "New MICOM database release!\n ${{ steps.rns.outputs.notes }}"
-          host: "mstdn.science"
+      with:
+        access-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+        message: "New MICOM database release!\n ${{ steps.rns.outputs.notes }}"
+        host: "mstdn.science"
