@@ -77,7 +77,7 @@ if __name__ == "__main__":
     check_status(r)
     final = r.json()
     with open(path.join("release_notes", f"{version}.txt"), "w") as rn:
-        rn.write(f"MICOM model databases version {version}.\n\n{final['doi_url']}\n")
+        rn.write(f"MICOM model databases version {version}.\n\n>> {final['doi_url']}<<\n")
     con.log(f"[green]Published the new release to {final['doi_url']}")
     with open(path.join("release_notes", version + ".json"), "w") as log:
         json.dump(final, log, indent=4)

@@ -1,6 +1,6 @@
 MICOM model databases version 1.
 
-https://doi.org/10.5281/zenodo.7739096
+>> https://doi.org/10.5281/zenodo.7739096 <<
 
 This is the first release of the new database workflow and adds many
 new databases for various taxonomy systems.

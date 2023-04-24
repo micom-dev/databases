@@ -57,5 +57,5 @@ jobs:
       uses: rzr/fediverse-action@master
       with:
         access-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
-        message: "New MICOM database release!\n ${{ steps.rns.outputs.contents }}"
+        message: "New MICOM database release!\n---\n ${{ steps.rns.outputs.contents }}"
         host: "mstdn.science"
