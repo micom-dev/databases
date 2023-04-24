@@ -40,12 +40,8 @@ jobs:
         name: manifests
         path: recipes/*/manifests/*.tsv
     - name: Get release notes
-      outputs:
-        release_notes: ${{ steps.cat.outputs.notes }}
-      steps:
-        - id: cat
-        - run: echo "notes=$(cat ${{ steps.tag.outputs.version }}.txt)" >> $GITHUB_OUTPUT
-
+      id: rns
+      run: echo "notes=$(cat ${{ steps.tag.outputs.version }}.txt)" >> $GITHUB_OUTPUT
     - name: Create Release
       uses: ncipollo/release-action@v1
       with:
@@ -55,3 +51,9 @@ jobs:
         bodyFile: "release_notes/${{ steps.tag.outputs.version }}.txt"
         draft: false
         prerelease: false
+    - name: toot release
+      uses: rzr/fediverse-action@master
+        with:
+          access-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+          message: "New MICOM database release!\n ${{ steps.rns.outputs.notes }}"
+          host: "mstdn.science"
