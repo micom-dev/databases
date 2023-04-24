@@ -48,3 +48,29 @@ root
                |manifests           # lists of all models in a DB
                |databases           # databases that were built
 ```
+
+## Databases
+
+**AGORA 1**
+cite: https://doi.org/10.1038/nbt.3703
+
+Models built from AGORA 1. This was the only available database in prior versions
+of MICOM.
+
+**AGORA 2**
+cite: https://doi.org/10.1038/s41587-022-01628-0
+
+An updated version of AGORA 1 now containing models for 7,302 strains.
+
+**CARVEME**
+cite: https://doi.org/10.1093/nar/gky537
+
+Automated reconstructions using CARVEME for all bacterial genomes present
+in Refseq since version 84.
+
+**UHGG**
+cite: https://doi.org/10.1038/s41587-020-0603-3 and https://doi.org/10.1186/s13059-021-02295-1
+
+Automated reconstructions using gapseq for all bacterial and archaeal genomes in UHGG version 2
+and gapfilled on the human gut medium.
+
