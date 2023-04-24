@@ -41,14 +41,14 @@ jobs:
         path: recipes/*/manifests/*.tsv
     - name: Get release notes
       id: rns
-      run: echo "notes=$(cat ${{ steps.tag.outputs.version }}.txt)" >> $GITHUB_OUTPUT
+      run: echo "notes=$(cat release_notes/${{ github.ref_name }}.txt)" >> $GITHUB_OUTPUT
     - name: Create Release
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        name: "version {{ steps.tag.outputs.version }}"
-        artifacts: "recipes/*/manifests/*.tsv,release_notes/${{ steps.tag.outputs.version }}.json"
-        bodyFile: "release_notes/${{ steps.tag.outputs.version }}.txt"
+        name: "version ${{ github.ref_name }}"
+        artifacts: "recipes/*/manifests/*.tsv,release_notes/${{ github.ref_name }}.json"
+        bodyFile: "release_notes/${{ github.ref_name }}.txt"
         draft: false
         prerelease: false
     - name: toot release
