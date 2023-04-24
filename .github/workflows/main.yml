@@ -39,12 +39,19 @@ jobs:
       with:
         name: manifests
         path: recipes/*/manifests/*.tsv
+    - name: Get release notes
+      outputs:
+        release_notes: ${{ steps.cat.outputs.notes }}
+      steps:
+        - id: cat
+        - run: echo "notes=$(cat ${{ steps.tag.outputs.version }}.txt)" >> $GITHUB_OUTPUT
+
     - name: Create Release
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         name: "version {{ steps.tag.outputs.version }}"
-        artifacts: recipes/*/manifests/*.tsv
+        artifacts: recipes/*/manifests/*.tsv,release_notes/${{ steps.tag.outputs.version }}.json
         bodyFile: "release_notes/${{ steps.tag.outputs.version }}.txt"
         draft: false
         prerelease: false

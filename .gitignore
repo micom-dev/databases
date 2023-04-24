@@ -139,3 +139,5 @@ work
 # Large files
 databases
 models
+v*
+qiime2-*.yml
