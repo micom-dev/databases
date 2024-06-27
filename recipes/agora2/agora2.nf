@@ -77,7 +77,7 @@ process convert_to_gtdb {
     rank_idx = gtdb_rank_names.get_loc("${level}")
     tax = meta.gtdb_taxonomy.str.split(";", expand=True)
     tax.columns = gtdb_rank_names
-    meta = pd.concat([meta, tax], 1).drop(["gtdb_taxonomy"], axis=1).drop_duplicates()
+    meta = pd.concat([meta, tax], axis = 1).drop(["gtdb_taxonomy"], axis=1).drop_duplicates()
 
     agora = pd.read_csv("${manifest}", sep="\\t").drop(
         ["strain", "species", "genus" , "family","order", "class", "phylum", "kingdom"],
