@@ -5,7 +5,7 @@ params.manifest = "${params.out}/data/genomes.csv"
 params.uhgg_version = "201"
 params.refseq = "232"
 params.gtdb = "226"
-params.database_version = "1"
+params.database_version = "2"
 params.models = "${params.out}/models"
 
 workflow {

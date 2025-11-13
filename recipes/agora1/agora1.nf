@@ -5,7 +5,7 @@ params.manifest = "${params.out}/data/agora103_new_taxa.tsv"
 params.agora_version = "103"
 params.refseq = "216"
 params.gtdb = "207"
-params.database_version = "1"
+params.database_version = "2"
 params.models = "${params.out}/models"
 
 

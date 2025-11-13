@@ -2,7 +2,7 @@ creators:
   - name: Diener, Christian
     affiliation: Institute for Systems Biology
     orcid: 0000-0002-7476-0868
-version: "1"
+version: "2"
 upload_type: dataset
 access_right: open
 license: cc-by-sa
