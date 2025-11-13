@@ -89,7 +89,7 @@ process ConvertToGtdb {
 
     import pandas as pd
 
-    gtdb_rank_names = pd.Index(["kingdom", "phylum", "class", "order", "family", "genus", "species"])
+    gtdb_rank_names = pd.Index(["domain", "phylum", "class", "order", "family", "genus", "species"])
 
     files = "${tables}".split()
     meta = pd.concat(

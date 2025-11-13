@@ -43,7 +43,7 @@ process ConvertToGtdb {
     import pandas as pd
     from os import path
 
-    gtdb_rank_names = pd.Index(["kingdom", "phylum", "class", "order", "family", "genus", "species"])
+    gtdb_rank_names = pd.Index(["domain", "phylum", "class", "order", "family", "genus", "species"])
 
     manifest = pd.read_csv("${params.manifest}")
     tax = manifest.lineage.str.split(";", expand=True)
