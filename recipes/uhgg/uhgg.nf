@@ -1,3 +1,5 @@
+#!/usr/bin/env nextflow
+
 nextflow.enable.dsl=2
 
 params.out = "${launchDir}"
@@ -28,7 +30,6 @@ process ConvertToGtdb {
     cpus 1
     memory 4.GB
     time 1.h
-    publishDir "${params.out}/manifests", mode: "copy", overwrite: true
 
     input:
     val(level)
@@ -78,7 +79,6 @@ process ConvertToRefseq {
     cpus 1
     memory 4.GB
     time 1.h
-    publishDir "${params.out}/manifests", mode: "copy", overwrite: true
 
     input:
     tuple val(level), val(db), val(ver), path(manifest)
