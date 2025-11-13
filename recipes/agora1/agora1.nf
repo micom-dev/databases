@@ -27,6 +27,8 @@ workflow {
 
 process ConvertToRefseq {
     cpus 1
+    memory 4.GB
+    time 1.h
     publishDir "${params.out}/manifests", mode: "copy", overwrite: true
 
     input:
@@ -51,6 +53,8 @@ process ConvertToRefseq {
 
 process DownloadGtdbTables {
     cpus 1
+    memory 8.GB
+    time 8.h
     errorStrategy 'retry'
     maxRetries 3
 
@@ -68,6 +72,8 @@ process DownloadGtdbTables {
 
 process ConvertToGtdb {
     cpus 1
+    memory 4.GB
+    time 1.h
     publishDir "${params.out}/manifests", mode: "copy", overwrite: true
 
     input:
@@ -115,6 +121,8 @@ process ConvertToGtdb {
 process BuildDb {
     publishDir "${params.out}/databases", mode: "copy", overwrite: true
     cpus 12
+    memory 16.GB
+    time 8.h
 
     input:
     tuple val(level), val(db), val(ver), path(manifest)
@@ -134,6 +142,8 @@ process BuildDb {
 
 process GetManifest {
     cpus 1
+    memory 4.GB
+    time 1.h
     publishDir "${params.out}/manifests", mode: "copy", overwrite: true
 
     input:
