@@ -1,15 +1,32 @@
 nextflow.enable.dsl=2
 
-params.manifest = "${baseDir}/data/genomes.csv"
+params.out = "${launchDir}"
+params.manifest = "${params.out}/data/genomes.csv"
 params.uhgg_version = "201"
-params.refseq = "216"
-params.gtdb = "207"
+params.refseq = "232"
+params.gtdb = "226"
 params.database_version = "1"
-params.models = "${baseDir}/models"
+params.models = "${params.out}/models"
 
-process convert_to_gtdb {
+workflow {
+    levels = channel.from(["genus", "species"])
+
+    DownloadGtdbTables()
+
+    gtdb_manifests = ConvertToGtdb(levels)
+    refseq_manifests = ConvertToRefseq(gtdb_manifests, DownloadGtdbTables.out)
+
+    refseq_manifests.concat(gtdb_manifests).view()
+
+    BuildDb(refseq_manifests.concat(gtdb_manifests)) | GetManifest
+}
+
+
+// Process definitions
+
+process ConvertToGtdb {
     cpus 1
-    publishDir "${baseDir}/manifests", mode: "copy", overwrite: true
+    publishDir "${params.out}/manifests", mode: "copy", overwrite: true
 
     input:
     val(level)
@@ -17,6 +34,7 @@ process convert_to_gtdb {
     output:
     tuple val(level), val("gtdb"), val("${params.gtdb}"), path("uhgg_gtdb_${level}.tsv")
 
+    script:
     """
     #!/usr/bin/env python
 
@@ -35,7 +53,7 @@ process convert_to_gtdb {
     """
 }
 
-process download_gtdb_tables {
+process DownloadGtdbTables {
     cpus 1
     errorStrategy 'retry'
     maxRetries 3
@@ -43,6 +61,7 @@ process download_gtdb_tables {
     output:
     path("*.tsv")
 
+    script:
     """
     wget --no-check-certificate -O gtdb_bac.tar.gz https://data.gtdb.ecogenomic.org/releases/release${params.gtdb}/${params.gtdb}.0/bac120_metadata_r${params.gtdb}.tar.gz
     wget --no-check-certificate -O gtdb_ar.tar.gz https://data.gtdb.ecogenomic.org/releases/release${params.gtdb}/${params.gtdb}.0/ar53_metadata_r${params.gtdb}.tar.gz
@@ -51,9 +70,9 @@ process download_gtdb_tables {
     """
 }
 
-process convert_to_refseq {
+process ConvertToRefseq {
     cpus 1
-    publishDir "${baseDir}/manifests", mode: "copy", overwrite: true
+    publishDir "${params.out}/manifests", mode: "copy", overwrite: true
 
     input:
     tuple val(level), val(db), val(ver), path(manifest)
@@ -62,6 +81,7 @@ process convert_to_refseq {
     output:
     tuple val(level), val("refseq"), val("${params.refseq}"), path("uhgg_refseq_${level}.tsv")
 
+    script:
     """
     #!/usr/bin/env python
 
@@ -96,16 +116,17 @@ process convert_to_refseq {
 
 }
 
-process build_db {
-    publishDir "${baseDir}/databases", mode: "copy", overwrite: true
+process BuildDb {
+    publishDir "${params.out}/databases", mode: "copy", overwrite: true
     cpus 12
 
     input:
     tuple val(level), val(db), val(ver), path(manifest)
 
     output:
-    path("*.qza")
+    tuple val(level), val(db), val(ver), path("*.qza")
 
+    script:
     """
     qiime micom db --m-meta-file ${manifest} \
         --p-rank ${level} \
@@ -115,15 +136,28 @@ process build_db {
     """
 }
 
-workflow {
-    levels = Channel.from(["genus", "species"])
+process GetManifest {
+    cpus 1
+    publishDir "${params.out}/manifests", mode: "copy", overwrite: true
 
-    download_gtdb_tables()
+    input:
+    tuple val(level), val(db), val(ver), path(arti)
 
-    gtdb_manifests = convert_to_gtdb(levels)
-    refseq_manifests = convert_to_refseq(gtdb_manifests, download_gtdb_tables.out)
+    output:
+    path("agora${params.agora_version}_${db}${ver}_${level}_${params.database_version}.tsv")
 
-    refseq_manifests.concat(gtdb_manifests).view()
+    script:
+    """
+    #!/usr/bin/env python
+    import pandas as pd
+    import qiime2 as q2
 
-    build_db(refseq_manifests.concat(gtdb_manifests))
+    db = q2.Artifact.load("${arti}")
+    manifest = db.manifest.view(pd.DataFrame)
+    manifest.to_csv(
+        "agora${params.agora_version}_${db}${ver}_${level}_${params.database_version}.tsv",
+        sep="\\t",
+        index=False
+    )
+    """
 }
